@@ -30,27 +30,28 @@
 
     <!-- ✅ Build Section (IMPORTANT) -->
     <build>
-        <finalName>sample-app</finalName>
+    <finalName>sample-app</finalName>
 
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-             
-        <!-- ✅ WAR Plugin FIX (IMPORTANT) -->
+    <plugins>
+
+        <!-- Java Version Fix -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.11.0</version>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
+
+        <!-- CRITICAL FIX -->
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-war-plugin</artifactId>
             <version>3.3.2</version>
         </plugin>
- </plugins>
 
-    </build>
-
+    </plugins>
+</build>
 </project>
